@@ -30,7 +30,7 @@ class FiveDayForecast extends React.Component {
 		//setup unit change
 		let btnMetric = classNames('button', {active: this.state.metricActive});
 		let btnImperial = classNames('button', {active: this.state.imperialActive});
-
+		console.log(this.props.thread);
 		return (
 			<div className="ftc_item">
 				<div className="box">

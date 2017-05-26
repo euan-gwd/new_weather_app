@@ -23,41 +23,11 @@ class CurrentWeather extends React.Component {
 		};
 	} //end constructor
 
-	getLocalWeather(position) {
-		let pos_lat = position.lat;
-		let pos_lon = position.lon;
-		fetch(`http://api.wunderground.com/api/a856679be7a8710b/conditions/q/${pos_lat},${pos_lon}.json`).then(res => res.json()).then(data => {
-			let weatherData = data.current_observation;
-			let currentTemp = `${weatherData.temp_c}°C / ${weatherData.temp_f}°F`;
-			let currentFeels = `Feels: ${weatherData.feelslike_c}°C / ${weatherData.feelslike_f}°F`;
-			let icon = `${weatherData.icon}.svg`;
-			const iconUrl = require(`../icons/${icon}`);
-			let windSpeedKPH = `${weatherData.wind_kph} kph`;
-			let windSpeedMPH = `${weatherData.wind_mph} mph`;
-			let windDirection = weatherData.wind_dir;
-			let currentWind = `${windSpeedKPH} / ${windSpeedMPH} from the ${windDirection}`;
-			let rainTodayImperial = `${weatherData.precip_today_in}in `;
-			let rainTodayMetric = `${weatherData.precip_today_metric} mm`;
-			let currentRain = `${rainTodayMetric} / ${rainTodayImperial}`;
-			this.setState({
-				city: weatherData.display_location.city,
-				currenthumidity: weatherData.relative_humidity,
-				currentTemp: currentTemp,
-				currentFeels: currentFeels,
-				currentWind: currentWind,
-				currentCondition: weatherData.weather,
-				currentIcon: iconUrl,
-				currentRain: currentRain
-			});
-		}).catch(err => {
-			console.error('Fetch failed', err, err.message);
-		});
-	}; //end getLocalWeather
-
-	// getLocalWeatherMock() {
-	// 	fetch(`http://localhost:9000/current_observation`).then(res => res.json()).then(data => {
-	// 		let weatherData = data;
-	// 		console.log(weatherData);
+	// getLocalWeather(position) {
+	// 	let pos_lat = position.lat;
+	// 	let pos_lon = position.lon;
+	// 	fetch(`http://api.wunderground.com/api/a856679be7a8710b/conditions/q/${pos_lat},${pos_lon}.json`).then(res => res.json()).then(data => {
+	// 		let weatherData = data.current_observation;
 	// 		let currentTemp = `${weatherData.temp_c}°C / ${weatherData.temp_f}°F`;
 	// 		let currentFeels = `Feels: ${weatherData.feelslike_c}°C / ${weatherData.feelslike_f}°F`;
 	// 		let icon = `${weatherData.icon}.svg`;
@@ -70,20 +40,49 @@ class CurrentWeather extends React.Component {
 	// 		let rainTodayMetric = `${weatherData.precip_today_metric} mm`;
 	// 		let currentRain = `${rainTodayMetric} / ${rainTodayImperial}`;
 	// 		this.setState({
-	// 			city: weatherData.display_location.full,
+	// 			city: weatherData.display_location.city,
 	// 			currenthumidity: weatherData.relative_humidity,
 	// 			currentTemp: currentTemp,
 	// 			currentFeels: currentFeels,
 	// 			currentWind: currentWind,
 	// 			currentCondition: weatherData.weather,
 	// 			currentIcon: iconUrl,
-	// 			currentRain: currentRain,
-	// 			currentTime: weatherData.local_time_rfc822
+	// 			currentRain: currentRain
 	// 		});
 	// 	}).catch(err => {
 	// 		console.error('Fetch failed', err, err.message);
 	// 	});
-	// }; //end getLocalWeatherMock
+	// }; //end getLocalWeather
+
+	getLocalWeatherMock() {
+		fetch(`http://localhost:9000/current_observation`).then(res => res.json()).then(data => {
+			let weatherData = data;
+			let currentTemp = `${weatherData.temp_c}°C / ${weatherData.temp_f}°F`;
+			let currentFeels = `Feels: ${weatherData.feelslike_c}°C / ${weatherData.feelslike_f}°F`;
+			let icon = `${weatherData.icon}.svg`;
+			const iconUrl = require(`../icons/${icon}`);
+			let windSpeedKPH = `${weatherData.wind_kph} kph`;
+			let windSpeedMPH = `${weatherData.wind_mph} mph`;
+			let windDirection = weatherData.wind_dir;
+			let currentWind = `${windSpeedKPH} / ${windSpeedMPH} from the ${windDirection}`;
+			let rainTodayImperial = `${weatherData.precip_today_in}in `;
+			let rainTodayMetric = `${weatherData.precip_today_metric} mm`;
+			let currentRain = `${rainTodayMetric} / ${rainTodayImperial}`;
+			this.setState({
+				city: weatherData.display_location.full,
+				currenthumidity: weatherData.relative_humidity,
+				currentTemp: currentTemp,
+				currentFeels: currentFeels,
+				currentWind: currentWind,
+				currentCondition: weatherData.weather,
+				currentIcon: iconUrl,
+				currentRain: currentRain,
+				currentTime: weatherData.local_time_rfc822
+			});
+		}).catch(err => {
+			console.error('Fetch failed', err, err.message);
+		});
+	}; //end getLocalWeatherMock
 
 	getPosition = () => {
 		fetch('http://api.wunderground.com/api/a856679be7a8710b/geolookup/q/autoip.json').then(res => res.json()).then(data => {
@@ -96,8 +95,8 @@ class CurrentWeather extends React.Component {
 	} //end getPosition
 
 	componentWillMount() {
-		this.getPosition();
-		// this.getLocalWeatherMock();
+		// this.getPosition();
+		this.getLocalWeatherMock();
 	} //end componentWillMount
 
 	render() {
