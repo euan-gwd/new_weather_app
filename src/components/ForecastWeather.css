@@ -1,0 +1,82 @@
+.forecast_weather_body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column;
+		min-height: 100vh;
+		font-family: 'Droid Serif';
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		width: 100vw;
+		background: rgba(255, 255, 255, 0.35);
+		z-index: 2;
+}
+
+.date {
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 400;
+		color: #157EFB;
+		font-size: 2em;
+		text-align: center;
+}
+
+.forecast_time {
+	text-align: center;
+}
+
+.fct_wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 0.5rem;
+		padding: 0.5rem;
+}
+
+.ftc_item {
+		display: flex;
+}
+
+.box {
+		border-radius: 3px;
+		background: rgba(255, 255, 255, 0.35);
+		box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.box-leveled {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+}
+
+.box-level-left {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+}
+
+.box-level-right {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+}
+
+.has-text-centered {
+		text-align: center;
+}
+
+.has-icon-centered {
+		text-align: right;
+}
+
+.ftc_title {
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 400;
+		text-align: center;
+		font-size: 1.5em;
+}
+
+.fct_conditions {
+		padding: 0.5rem;
+}

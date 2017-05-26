@@ -1,0 +1,34 @@
+.thunderstorm {
+		background: url(../images/thunderstorm.jpg) no-repeat center center fixed;
+		background-size: cover;
+}
+
+.rain {
+		background: url(../images/rain.jpg) no-repeat center center fixed;
+		background-size: cover;
+}
+
+.snow {
+		background: url(../images/snow.jpg) no-repeat center center fixed;
+		background-size: cover;
+}
+
+.flurries {
+		background: url(../images/flurries.jpg) no-repeat center center fixed;
+		background-size: cover;
+}
+
+.clear_sky {
+		background: url(../images/clear_sky.jpg) no-repeat center center fixed;
+		background-size: cover;
+}
+
+.cloudy {
+		background: url(../images/cloudy.jpg) no-repeat center center fixed;
+		background-size: cover;
+}
+
+.partlycloudy {
+		background: url(../images/partlycloudy.jpg) no-repeat center center fixed;
+		background-size: cover;
+}

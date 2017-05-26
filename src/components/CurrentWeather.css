@@ -1,0 +1,116 @@
+.current_weather_body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column;
+		min-height: 100vh;
+		font-family: 'Droid Serif';
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		width: 100vw;
+		z-index: 2;
+}
+
+.container {
+		background-image: linear-gradient(to bottom, #a5cdfc 0%, #c9c9c9 100%);
+		border-radius: 5px;
+		padding: 1rem;
+		width: auto;
+		height: 40%;
+		background: rgba(255, 255, 255, 0.35);
+		box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.current_city {
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 400;
+		color: #157EFB;
+		font-size: 2em;
+		text-align: center;
+}
+
+.current_time {
+	text-align: center;
+	margin-bottom: 1vh;
+}
+
+.current_conditions {
+		/*font-size: 3vh;*/
+		/*color: #353535;*/
+}
+
+.current_conditions-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
+
+.icon-weather {
+		padding-right: .5vw;
+}
+
+.temperature-wrapper {
+		display: flex;
+		justify-content: center;
+}
+
+.temperature_icon {
+		padding-right: .5vw;
+		align-self: center;
+}
+
+.temperature {
+		font-size: 10vh;
+		text-align: center;
+		color: white;
+}
+
+.metric {
+		color: #0a0a0a;
+}
+
+.imperial {
+		color: #656565;
+}
+
+.feels_like {
+		font-size: 1rem;
+		text-align: center;
+		color: #5c5c5c;
+}
+
+.humidity-wrapper {
+		display: flex;
+		justify-content: center;
+}
+
+.humidity {
+		font-size: 1em;
+		align-self: center;
+		padding-left: .5em;
+}
+
+.wind-wrapper {
+		display: flex;
+		justify-content: center;
+		margin: .5em 0;
+}
+
+.wind {
+		font-size: 1em;
+		align-self: center;
+		padding-left: .5em;
+}
+
+.rain-wrapper {
+		display: flex;
+		justify-content: center;
+}
+
+.rain-today {
+		font-size: 1em;
+		align-self: center;
+		padding-left: .75em;
+}
