@@ -9,11 +9,10 @@
 		font-style: normal;
 		font-weight: 400;
 		width: 100vw;
-		background: rgba(255, 255, 255, 0.35);
 		z-index: 2;
 }
 
-.date {
+.header {
 		font-family: 'Raleway';
 		font-style: normal;
 		font-weight: 400;
@@ -23,7 +22,7 @@
 }
 
 .forecast_time {
-	text-align: center;
+		text-align: center;
 }
 
 .fct_wrapper {
@@ -41,24 +40,22 @@
 		border-radius: 3px;
 		background: rgba(255, 255, 255, 0.35);
 		box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+		padding: 1vh 1vw;
 }
 
 .box-leveled {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 }
 
-.box-level-left {
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
+.max_temp {
+		text-align: center;
+		color: red;
 }
 
-.box-level-right {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
+.min_temp {
+		text-align: center;
+		color: blue;
 }
 
 .has-text-centered {
@@ -74,7 +71,7 @@
 		font-style: normal;
 		font-weight: 400;
 		text-align: center;
-		font-size: 1.5em;
+		font-size: 1em;
 }
 
 .fct_conditions {

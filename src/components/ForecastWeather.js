@@ -53,8 +53,7 @@ class ForecastWeather extends React.Component {
 		return (
 			<div className="forecast_weather_body">
 				<div className="">
-					<div className="date">Weather Forecast</div>
-					<div className="forecast_time">as of {this.state.date}</div>
+					<div className="header">4 Day Weather Forecast</div>
 					<div className="fct_wrapper">
 						{this.state.forecastArray.map((item, index) => {
 							return (<FiveDayForecast thread={item} key={index}/>);
