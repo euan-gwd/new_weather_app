@@ -9,18 +9,20 @@ class FiveDayForecast extends React.Component {
 		let metricLow = `${this.props.thread.low.celsius}°C`;
 		let impHigh = `${this.props.thread.high.fahrenheit}°F`;
 		let impLow = `${this.props.thread.low.fahrenheit}°F`;
+		let conditions = this.props.thread.conditions;
 		return (
 			<div className="ftc_item">
 				<div className="ftc_box">
 					<header className="ftc_title">
 						{day}
 					</header>
-					<div className="has-text-centered fct_conditions">
+					<div className="has-icon-centered">
 						<img src={iconUrl} height="32px" width="32px" alt="weather condition icon"/>
 					</div>
-					<div className="">
+					<div className="has-text-centered">{conditions}</div>
+					<div className="temps_wrapper">
 						<p className="max_temp">
-							{metricHigh} / {impHigh}
+							{metricHigh}	/ {impHigh}
 						</p>
 						<p className="min_temp">
 							{metricLow} / {impLow}

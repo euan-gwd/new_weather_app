@@ -1,5 +1,5 @@
 :root {
-	--text-color : #FFFFE0;
+	--text-color : #e3e3bc;
 }
 .current_weather_body {
 		display: flex;
