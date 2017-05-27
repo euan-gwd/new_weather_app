@@ -26,7 +26,7 @@ class CurrentWeather extends React.Component {
 	getLocalWeather(position) {
 		let pos_lat = position.lat;
 		let pos_lon = position.lon;
-		fetch(`http://api.wunderground.com/api/a856679be7a8710b/conditions/q/${pos_lat},${pos_lon}.json`).then(res => res.json()).then(data => {
+		fetch(`https://api.wunderground.com/api/a856679be7a8710b/conditions/q/${pos_lat},${pos_lon}.json`).then(res => res.json()).then(data => {
 			let weatherData = data.current_observation;
 			let currentTemp = `${weatherData.temp_c}°C / ${weatherData.temp_f}°F`;
 			let currentFeels = `Feels: ${weatherData.feelslike_c}°C / ${weatherData.feelslike_f}°F`;
@@ -59,7 +59,7 @@ class CurrentWeather extends React.Component {
 
 
 	getPosition = () => {
-		fetch('http://api.wunderground.com/api/a856679be7a8710b/geolookup/q/autoip.json').then(res => res.json()).then(data => {
+		fetch('https://api.wunderground.com/api/a856679be7a8710b/geolookup/q/autoip.json').then(res => res.json()).then(data => {
 			let position = {
 				lat: data.location.lat,
 				lon: data.location.lon
