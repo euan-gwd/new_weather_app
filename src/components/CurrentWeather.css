@@ -3,22 +3,17 @@
 		justify-content: center;
 		align-items: center;
 		flex-flow: column;
-		min-height: 100vh;
 		font-family: 'Droid Serif';
 		font-size: 16px;
 		font-style: normal;
 		font-weight: 400;
-		width: 100vw;
-		z-index: 2;
 }
 
 .container {
 		background-image: linear-gradient(to bottom, #a5cdfc 0%, #c9c9c9 100%);
 		border-radius: 5px;
-		padding: 1rem;
-		width: auto;
-		height: 40%;
-		background: rgba(255, 255, 255, 0.35);
+		padding: .5rem;
+		background: rgba(125, 124, 124, 0.75);
 		box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
 
@@ -29,16 +24,23 @@
 		color: #157EFB;
 		font-size: 2em;
 		text-align: center;
+		padding-top: 1vh;
+}
+
+@media (max-width: 320px) {
+		.current_city {
+				font-family: 'Raleway';
+				font-style: normal;
+				font-weight: 400;
+				color: #157EFB;
+				font-size: 1.5em;
+				text-align: center;
+		}
 }
 
 .current_time {
-	text-align: center;
-	margin-bottom: 1vh;
-}
-
-.current_conditions {
-		/*font-size: 3vh;*/
-		/*color: #353535;*/
+		text-align: center;
+		margin-bottom: 1vh;
 }
 
 .current_conditions-wrapper {
@@ -62,9 +64,15 @@
 }
 
 .temperature {
-		font-size: 10vh;
+		font-size: 4em;
 		text-align: center;
-		color: white;
+		color: #D2000C;
+}
+
+@media (max-width: 320px) {
+		.temperature {
+				font-size: 2.5em;
+		}
 }
 
 .metric {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './actions.css';
+import ForecastWeather from './ForecastWeather';
 import windIcon from '../icons/icon-43-wind.svg';
 import humidityIcon from '../icons/icon-52-barometer.svg';
 import temperatureIcon from '../icons/icon-69-thermometer-half.svg';
@@ -105,7 +105,7 @@ class CurrentWeather extends React.Component {
 				<div className="">
 					<div className="current_city">{this.state.city}</div>
 					<div className="current_time">
-						Weather as of {this.state.currentTime}
+						As of {this.state.currentTime}
 					</div>
 					<div className="container">
 						<div className="current_conditions-wrapper">
@@ -132,6 +132,7 @@ class CurrentWeather extends React.Component {
 								% humidity</div>
 						</div>
 					</div>
+					<ForecastWeather />
 				</div>
 			</div>
 		);

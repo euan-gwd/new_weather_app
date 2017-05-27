@@ -3,13 +3,10 @@
 		justify-content: center;
 		align-items: center;
 		flex-flow: column;
-		min-height: 100vh;
 		font-family: 'Droid Serif';
 		font-size: 16px;
 		font-style: normal;
 		font-weight: 400;
-		width: 100vw;
-		z-index: 2;
 }
 
 .header {
@@ -19,6 +16,13 @@
 		color: #157EFB;
 		font-size: 2em;
 		text-align: center;
+		padding-top: 1vh;
+}
+
+@media (max-width: 320px) {
+		.header {
+			font-size: 1.5em;
+		}
 }
 
 .forecast_time {
@@ -36,11 +40,11 @@
 		display: flex;
 }
 
-.box {
+.ftc_box {
 		border-radius: 3px;
-		background: rgba(255, 255, 255, 0.35);
+		background: rgba(125, 124, 124, 0.75);
 		box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-		padding: 1vh 1vw;
+		padding: .5vh .5vw;
 }
 
 .box-leveled {
@@ -50,12 +54,12 @@
 
 .max_temp {
 		text-align: center;
-		color: red;
+		color: #d28500;
 }
 
 .min_temp {
 		text-align: center;
-		color: blue;
+		color: #a3e2fb;
 }
 
 .has-text-centered {
@@ -75,5 +79,5 @@
 }
 
 .fct_conditions {
-		padding: 0.5rem;
+		/*padding: 0.5rem;*/
 }

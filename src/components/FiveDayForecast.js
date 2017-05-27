@@ -1,5 +1,4 @@
 import React from 'react';
-import './actions.css';
 
 class FiveDayForecast extends React.Component {
 	render() {
@@ -12,7 +11,7 @@ class FiveDayForecast extends React.Component {
 		let impLow = `${this.props.thread.low.fahrenheit}°F`;
 		return (
 			<div className="ftc_item">
-				<div className="box">
+				<div className="ftc_box">
 					<header className="ftc_title">
 						{day}
 					</header>
