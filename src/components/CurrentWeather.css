@@ -1,7 +1,8 @@
 :root {
-	--text-color : #e3e3bc;
-	--alt-text-color: #B0C4DE;
+		--text-color: #e3e3bc;
+		--alt-text-color: #B0C4DE;
 }
+
 .current_weather_body {
 		display: flex;
 		justify-content: center;
@@ -16,9 +17,22 @@
 .container {
 		background-image: linear-gradient(to bottom, #a5cdfc 0%, #c9c9c9 100%);
 		border-radius: 5px;
-		padding: .5rem;
+		padding: 1vh 9vw;
 		background: rgba(0, 0, 0, 0.5);
 		box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+@media (min-width: 320px) and (max-width: 409px) and (orientation: portrait) {
+		.container {
+				display: block;
+				width: 100%;
+		}
+}
+
+@media (min-width: 410px) and (max-width: 959px) and (orientation: portrait) {
+		.container {
+				padding: .5vh 4vw;
+		}
 }
 
 .current_city {
@@ -31,20 +45,17 @@
 		padding-top: 1vh;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 320px) and (orientation: portrait) {
 		.current_city {
-				font-family: 'Raleway';
-				font-style: normal;
-				font-weight: 400;
-				color: #157EFB;
 				font-size: 1.5em;
-				text-align: center;
 		}
 }
 
 .current_time {
 		text-align: center;
 		margin-bottom: 1vh;
+		color: var(--alt-text-color);
+		font-size: 1rem;
 }
 
 .current_conditions-wrapper {
@@ -54,8 +65,8 @@
 }
 
 .current_conditions {
-	padding-left: .5vw;
-	align-self: flex-end;
+		padding-left: .5vw;
+		align-self: flex-end;
 }
 
 .icon-weather {
@@ -65,6 +76,7 @@
 .temperature-wrapper {
 		display: flex;
 		justify-content: center;
+		padding: 0 3.75vw;
 }
 
 .temperature_icon {
@@ -75,21 +87,19 @@
 .temperature {
 		font-size: 4em;
 		text-align: center;
-		color: 	var(--text-color);
+		color: var(--text-color);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 320px) and (orientation: portrait) {
 		.temperature {
 				font-size: 2.5em;
 		}
 }
 
-.metric {
-		color: #0a0a0a;
-}
-
-.imperial {
-		color: #656565;
+@media (min-width: 320px) and (orientation: landscape) {
+		.temperature {
+				font-size: 2em;
+		}
 }
 
 .feels_like {
@@ -107,7 +117,7 @@
 		font-size: 1em;
 		align-self: center;
 		padding-left: .5em;
-		color: 	var(--text-color);
+		color: var(--text-color);
 }
 
 .wind-wrapper {
@@ -120,7 +130,7 @@
 		font-size: 1em;
 		align-self: center;
 		padding-left: .5em;
-		color: 	var(--text-color);
+		color: var(--text-color);
 }
 
 .rain-wrapper {
@@ -132,5 +142,5 @@
 		font-size: 1em;
 		align-self: center;
 		padding-left: .75em;
-		color: 	var(--text-color);
+		color: var(--text-color);
 }

@@ -4,6 +4,7 @@ import windIcon from '../icons/icon-43-wind.svg';
 import humidityIcon from '../icons/icon-52-barometer.svg';
 import temperatureIcon from '../icons/icon-69-thermometer-half.svg';
 import rainIcon from '../icons/icon-rain.svg';
+import './weather_backgrounds.css';
 import './CurrentWeather.css';
 
 class CurrentWeather extends React.Component {
@@ -67,6 +68,7 @@ class CurrentWeather extends React.Component {
 			let rainTodayImperial = `${weatherData.precip_today_in}in `;
 			let rainTodayMetric = `${weatherData.precip_today_metric} mm`;
 			let currentRain = `${rainTodayMetric} / ${rainTodayImperial}`;
+			let imgUrl = weatherData.icon;
 			this.setState({
 				city: weatherData.display_location.full,
 				currenthumidity: weatherData.relative_humidity,
@@ -74,6 +76,7 @@ class CurrentWeather extends React.Component {
 				currentFeels: currentFeels,
 				currentWind: currentWind,
 				currentCondition: weatherData.weather,
+				currentImage: imgUrl,
 				currentIcon: iconUrl,
 				currentRain: currentRain,
 				currentTime: weatherData.local_time_rfc822
@@ -100,8 +103,8 @@ class CurrentWeather extends React.Component {
 
 	render() {
 		return (
-			<div className="current_weather_body">
-				<div className="">
+			<div className={this.state.currentImage}>
+				<div className="current_weather_body">
 					<div className="current_city">{this.state.city}</div>
 					<div className="current_time">
 						As of {this.state.currentTime}
