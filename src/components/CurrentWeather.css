@@ -1,3 +1,6 @@
+:root {
+	--text-color : #FFFFE0;
+}
 .current_weather_body {
 		display: flex;
 		justify-content: center;
@@ -13,7 +16,7 @@
 		background-image: linear-gradient(to bottom, #a5cdfc 0%, #c9c9c9 100%);
 		border-radius: 5px;
 		padding: .5rem;
-		background: rgba(125, 124, 124, 0.75);
+		background: rgba(0, 0, 0, 0.5);
 		box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
 
@@ -47,6 +50,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		color: 	var(--text-color);
 }
 
 .icon-weather {
@@ -66,7 +70,7 @@
 .temperature {
 		font-size: 4em;
 		text-align: center;
-		color: #D2000C;
+		color: 	var(--text-color);
 }
 
 @media (max-width: 320px) {
@@ -86,7 +90,7 @@
 .feels_like {
 		font-size: 1rem;
 		text-align: center;
-		color: #5c5c5c;
+		color: #B0C4DE;
 }
 
 .humidity-wrapper {
@@ -98,6 +102,7 @@
 		font-size: 1em;
 		align-self: center;
 		padding-left: .5em;
+		color: 	var(--text-color);
 }
 
 .wind-wrapper {
@@ -110,6 +115,7 @@
 		font-size: 1em;
 		align-self: center;
 		padding-left: .5em;
+		color: 	var(--text-color);
 }
 
 .rain-wrapper {
@@ -121,4 +127,5 @@
 		font-size: 1em;
 		align-self: center;
 		padding-left: .75em;
+		color: 	var(--text-color);
 }
