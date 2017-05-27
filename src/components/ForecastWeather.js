@@ -14,7 +14,7 @@ class ForecastWeather extends React.Component {
 	getWeatherForecast(position) {
 		let pos_lat = position.lat;
 		let pos_lon = position.lon;
-		fetch(`http://api.wunderground.com/api/a856679be7a8710b/forecast/q/${pos_lat},${pos_lon}.json`).then(res => res.json()).then(data => {
+		fetch(`https://api.wunderground.com/api/a856679be7a8710b/forecast/q/${pos_lat},${pos_lon}.json`).then(res => res.json()).then(data => {
 			const weatherData = data.forecast.simpleforecast;
 			const forecastData = weatherData.forecastday;
 			this.setState({date: weatherData.date, forecastArray: forecastData});
@@ -24,7 +24,7 @@ class ForecastWeather extends React.Component {
 	}; //end getWeatherForecast
 
 	getPosition = () => {
-		fetch('http://api.wunderground.com/api/a856679be7a8710b/geolookup/q/autoip.json').then(res => res.json()).then(data => {
+		fetch('https://api.wunderground.com/api/a856679be7a8710b/geolookup/q/autoip.json').then(res => res.json()).then(data => {
 			let position = {
 				lat: data.location.lat,
 				lon: data.location.lon
