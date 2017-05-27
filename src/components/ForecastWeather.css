@@ -33,7 +33,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-column-gap: 1vw;
-		padding-top: 2vh;
+		padding-top: 1.5vh;
 }
 
 .ftc_item {
@@ -60,7 +60,7 @@
 
 .has-text-centered {
 		text-align: center;
-		color: #B0C4DE;
+		color: var(--alt-text-color);
 		height: 38px;
 }
 

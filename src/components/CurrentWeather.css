@@ -1,5 +1,6 @@
 :root {
 	--text-color : #e3e3bc;
+	--alt-text-color: #B0C4DE;
 }
 .current_weather_body {
 		display: flex;
@@ -49,8 +50,12 @@
 .current_conditions-wrapper {
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		color: 	var(--text-color);
+		color: var(--alt-text-color);
+}
+
+.current_conditions {
+	padding-left: .5vw;
+	align-self: flex-end;
 }
 
 .icon-weather {
@@ -90,7 +95,7 @@
 .feels_like {
 		font-size: 1rem;
 		text-align: center;
-		color: #B0C4DE;
+		color: var(--alt-text-color);
 }
 
 .humidity-wrapper {
